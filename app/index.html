@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://api-maps.yandex.ru/v3/?apikey=8b39ca9c-c451-486e-9e57-2d16813928ed&lang=ru_RU"></script>
+</head>
+
+<body>
+
+  <section class="h-screen flex flex-col justify-between">
+    <header class="fixed bg-white top-0 right-0 left-0 z-20">
+      <div class="container max-w-1336px px-2 mx-auto py-18px font-ntsomic-regular text-base uppercase text-primary">
+        <div class="flex items-center justify-between">
+          <a class="logo uppercase text-2xl leading-24px" href="#home">
+            flexo <span class="text-white pr-14px bg-default inline-block">pack</span>
+          </a>
+          <nav class="menu order-1 ml-auto xl:mr-10 xl:order-none">
+            <button class="menu-btn xl:hidden grid gap-1">
+              <span class="block h-1 w-9 bg-primary"></span>
+              <span class="block h-1 w-9 bg-primary"></span>
+              <span class="block h-1 w-9 bg-primary"></span>
+            </button>
+            <ul
+              class="absolute left-0 right-0 text-center bg-white top-60px transition duration-500 xl:translate-y-0 xl:static xl:flex xl:gap-4 2xl:gap-9">
+              <li
+                class="p-1 hover:text-white hover:bg-destructive-500 xl:p-0 xl:hover:text-default xl:hover:bg-transparent">
+                <a href="#about">О
+                  нас</a>
+              </li>
+              <li
+                class="p-1 hover:text-white hover:bg-destructive-500 xl:p-0 xl:hover:text-default xl:hover:bg-transparent">
+                <a href="#technology">Технологии</a>
+              </li>
+              <li
+                class="p-1 hover:text-white hover:bg-destructive-500 xl:p-0 xl:hover:text-default xl:hover:bg-transparent">
+                <a href="#services">Услуги</a>
+              </li>
+              <li
+                class="p-1 hover:text-white hover:bg-destructive-500 xl:p-0 xl:hover:text-default xl:hover:bg-transparent">
+                <a href="#portfolio">Портфолио</a>
+              </li>
+              <li
+                class="p-1 hover:text-white hover:bg-destructive-500 xl:p-0 xl:hover:text-default xl:hover:bg-transparent">
+                <a href="#vacancies">Вакансии</a>
+              </li>
+              <li
+                class="p-1 hover:text-white hover:bg-destructive-500 xl:p-0 xl:hover:text-default xl:hover:bg-transparent">
+                <a href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="hidden font-ntsomic-bold text-default sm:block sm:ml-3 xl:ml-0" href="tel:+79999999999">+7 999
+            999-99-99</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-auto h-auto w-full pt-[60px]">
+      <section
+        class="container max-w-1336px px-2 mx-auto font-ntsomic-regular text-primary mt-10 mb-8 sm:mb-14 lg:mb-90px">
+        <h1
+          class="font-anton tracking-normal uppercase text-center text-7xl mb-2 sm:mb-5 sm:text-8xl lg:text-9xl 2xl:text-[250px]/[1] 4xl:mb-10 4xl:text-[300px]/[1] 4xl:tracking-[12px]">
+          Flexopack</h1>
+        <h2
+          class="font-ntsomic-semibold text-center uppercase text-base mb-5 md:mb-10 3xl:mb-20 sm:text-2xl md:text-[44px]/[1]">
+          Качественная упаковка - имидж
+          вашего продукта</h2>
+        <div class="flex mb-6 flex-wrap justify-center lg:mb-16 3xl:justify-between">
+          <p
+            class="text-secondary font-ntsomic-semibold text-lg tracking-[-1px] mb-5 text-center sm:text-2xl md:text-3xl 3xl:text-left 3xl:mb-0">
+            Производство и доставка этикетки <br> по всей России и
+            странам СНГ</p>
+          <div class="uppercase font-ntsomic-medium flex gap-4 justify-center flex-wrap text-sm sm:text-xl">
+            <a class="gray p-5 rounded-[48px] inline-block border-[2.5px] border-primary border-solid hover:bg-primary hover:text-white sm:py-[29px] sm:px-6"
+              href="#">заказать звонок</a>
+            <a class="dark-red p-5 font-ntsomic-semibold rounded-[48px] inline-block text-white bg-default hover:bg-focused sm:py-[29px] sm:px-6"
+              href="#">Ознакомиться с технологиями</a>
+          </div>
+        </div>
+        <div>
+          <div class="uppercase text-xs py-4 font-ntsomic-medium">
+            <div class="items-wrap">
+              <ul class="items marquee">
+                <li class="item px-2">ксопечать</li>
+                <li class="item px-2">уф-лакирование</li>
+                <li class="item px-2">трафаретная печать</li>
+                <li class="item px-2">конгрев</li>
+                <li class="item px-2">холодное и горячее тиснение</li>
+                <li class="item px-2">многослойная этикетка</li>
+                <li class="item px-2">печать переменной информации</li>
+                <li class="item px-2">многоуровневый конгрев</li>
+                <li class="item px-2">лазерная высечка</li>
+              </ul>
+              <ul aria-hidden="true" class="items marquee">
+                <li class="item px-2">ксопечать</li>
+                <li class="item px-2">уф-лакирование</li>
+                <li class="item px-2">трафаретная печать</li>
+                <li class="item px-2">конгрев</li>
+                <li class="item px-2">холодное и горячее тиснение</li>
+                <li class="item px-2">многослойная этикетка</li>
+                <li class="item px-2">печать переменной информации</li>
+                <li class="item px-2">многоуровневый конгрев</li>
+                <li class="item px-2">лазерная высечка</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mb-7 sm:mb-14 lg:mb-[120px]">
+            <img class="lazyload w-full h-auto" data-src="img/hero/4.jpg" src="img/1x1.png" alt="bottle">
+          </div>
+        </div>
+        <div class="flex justify-between flex-wrap gap-6 font-ntsomic-semibold text-primary">
+          <div class="pt-6 border-t-4 border-primary max-w-[312px] w-full mx-auto">
+            <h5 class="uppercase text-[13px] mb-8">производство в россии</h5>
+            <p class="text-8xl">3<span class="ml-2 text-default text-3xl">площадки</span></p>
+          </div>
+          <div class="pt-6 border-t-4 border-primary max-w-[312px] w-full mx-auto">
+            <h5 class="uppercase text-[13px] mb-8">опыт</h5>
+            <p class="text-8xl">17<span class="ml-2 text-default text-3xl">лет</span></p>
+          </div>
+          <div class="pt-6 border-t-4 border-primary max-w-[312px] w-full mx-auto">
+            <h5 class="uppercase text-[13px] mb-8">производственная площадь, м²</h5>
+            <p class="text-8xl">1,5<span class="ml-2 text-default text-3xl">тыс</span></p>
+          </div>
+          <div class="pt-6 border-t-4 border-primary max-w-[312px] w-full mx-auto">
+            <h5 class="uppercase text-[13px] mb-8">производственная мощность в год, м²</h5>
+            <p class="text-8xl">45<span class="ml-2 text-default text-3xl">млн</span></p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="container max-w-1336px px-2 mx-auto font-ntsomic-regular text-primary pt-60px mb-8 sm:mb-14 lg:mb-[100px]"
+        id="about">
+        <div class="flex justify-between flex-wrap 3xl:flex-nowrap">
+          <div class="mb-12 3xl:mb-0">
+            <h2 class="text-secondary text-xl/[1] mb-2">О нас</h2>
+            <h3 class="font-ntsomic-semibold text-2xl sm:text-5xl">Наш путь к качеству</h3>
+          </div>
+          <div class="flex justify-center flex-wrap 3xl:grid 3xl:grid-cols-2/344 gap-8 3xl:mr-8">
+            <div class="about-item about-item--1 pl-[84px] max-w-[344px] w-full">
+              <h5 class="font-ntsomic-medium text-2xl mb-3">Широкий выбор</h5>
+              <p class="text-secondary text-xl tracking-[-1px]">материалов и используемых технологий</p>
+            </div>
+            <div class="about-item about-item--2 pl-[84px] max-w-[344px] w-full">
+              <h5 class="font-ntsomic-medium text-2xl mb-3">Полный цикл</h5>
+              <p class="text-secondary text-xl tracking-[-1px]">от концепции и разработки дизайна до доставки готовой
+                продукции</p>
+            </div>
+            <div class="about-item about-item--3 pl-[84px] max-w-[344px] w-full">
+              <h5 class="font-ntsomic-medium text-2xl mb-3">Материалы</h5>
+              <p class="text-secondary text-xl tracking-[-1px]">производим сами</p>
+            </div>
+            <div class="about-item about-item--4 pl-[84px] max-w-[344px] w-full">
+              <h5 class="font-ntsomic-medium text-2xl mb-3">Доставка</h5>
+              <p class="text-secondary text-xl tracking-[-1px]">во все регионы РФ
+                (включая новые) и СНГ</p>
+            </div>
+            <div class="about-item about-item--5 pl-[84px] max-w-[344px] w-full">
+              <h5 class="font-ntsomic-medium text-2xl mb-3">Сертификация</h5>
+              <p class="text-secondary text-xl tracking-[-1px]">по стандарту систем менеджмента качества ISO 9001:2015
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="container max-w-1336px px-2 mx-auto font-ntsomic-regular text-primary pt-60px mb-8 sm:mb-14 lg:mb-[100px]"
+        id="technology">
+        <h2 class="text-secondary text-xl/[1] mb-2">Технологии</h2>
+        <h3 class="font-ntsomic-semibold text-2xl mb-20 sm:text-5xl">Инновационные способы <br> печати и обработки</h3>
+        <div class="font-ntsomic-bold flex justify-center flex-wrap md:grid grid-cols-12 gap-x-6 gap-y-10 w-full">
+          <a class="test col-span-6 xl:col-span-4 3xl:col-span-3 block" href="technology.html">
+            <div class="technology-item h-64 lg:h-[312px] mb-4">
+              <img class="lazyload object-cover h-full" data-src="img/technology/1.jpg" src="img/1x1.png" alt="item">
+            </div>
+            <h5 class="text-xl uppercase font-ntsomic-medium">Флексопечать</h5>
+          </a>
+          <a class="test col-span-6 xl:col-span-4 3xl:col-span-3 block" href="#">
+            <div class="technology-item h-64 lg:h-[312px] mb-4">
+              <img class="lazyload object-cover h-full" data-src="img/technology/1.jpg" src="img/1x1.png" alt="item">
+            </div>
+            <h5 class="text-xl uppercase font-ntsomic-medium">Формный участок</h5>
+          </a>
+          <a class="test col-span-6 xl:col-span-4 3xl:col-span-3 block" href="#">
+            <div class="technology-item h-64 lg:h-[312px] mb-4">
+              <img class="lazyload object-cover h-full" data-src="img/technology/1.jpg" src="img/1x1.png" alt="item">
+            </div>
+            <h5 class="text-xl uppercase font-ntsomic-medium">УФ-Лакирование</h5>
+          </a>
+          <a class="test col-span-6 xl:col-span-4 3xl:col-span-3 block" href="#">
+            <div class="technology-item h-64 lg:h-[312px] mb-4">
+              <img class="lazyload object-cover h-full" data-src="img/technology/1.jpg" src="img/1x1.png" alt="item">
+            </div>
+            <h5 class="text-xl uppercase font-ntsomic-medium">Трафаретная печать</h5>
+          </a>
+          <a class="test col-span-6 xl:col-span-4 3xl:col-span-3 block" href="#">
+            <div class="technology-item h-64 lg:h-[312px] mb-4">
+              <img class="lazyload object-cover h-full" data-src="img/technology/1.jpg" src="img/1x1.png" alt="item">
+            </div>
+            <h5 class="text-xl uppercase font-ntsomic-medium">Конгрев</h5>
+          </a>
+          <a class="test col-span-6 xl:col-span-4 3xl:col-span-3 block" href="#">
+            <div class="technology-item h-64 lg:h-[312px] mb-4">
+              <img class="lazyload object-cover h-full" data-src="img/technology/1.jpg" src="img/1x1.png" alt="item">
+            </div>
+            <h5 class="text-xl uppercase font-ntsomic-medium">Холодное и горячее тиснение</h5>
+          </a>
+          <a class="test col-span-6 xl:col-span-4 3xl:col-span-3 block" href="#">
+            <div class="technology-item h-64 lg:h-[312px] mb-4">
+              <img class="lazyload object-cover h-full" data-src="img/technology/1.jpg" src="img/1x1.png" alt="item">
+            </div>
+            <h5 class="text-xl uppercase font-ntsomic-medium">Многослойная этикетка</h5>
+          </a>
+          <a class="test col-span-6 xl:col-span-4 3xl:col-span-3 block" href="#">
+            <div class="technology-item h-64 lg:h-[312px] mb-4">
+              <img class="lazyload object-cover h-full" data-src="img/technology/1.jpg" src="img/1x1.png" alt="item">
+            </div>
+            <h5 class="text-xl uppercase font-ntsomic-medium">Печать переменной информации</h5>
+          </a>
+          <a class="test col-span-6 xl:col-span-4 3xl:col-span-3 block" href="#">
+            <div class="technology-item h-64 lg:h-[312px] mb-4">
+              <img class="lazyload object-cover h-full" data-src="img/technology/1.jpg" src="img/1x1.png" alt="item">
+            </div>
+            <h5 class="text-xl uppercase font-ntsomic-medium">Лазерная высечка</h5>
+          </a>
+          <a class="test col-span-6 xl:col-span-4 3xl:col-span-3 block" href="#">
+            <div class="technology-item h-64 lg:h-[312px] mb-4">
+              <img class="lazyload object-cover h-full" data-src="img/technology/1.jpg" src="img/1x1.png" alt="item">
+            </div>
+            <h5 class="text-xl uppercase font-ntsomic-medium">Многоуровневый конгрев</h5>
+          </a>
+          <a class="test col-span-6 xl:col-span-4 3xl:col-span-3 block" href="#">
+            <div class="technology-item h-64 lg:h-[312px] mb-4">
+              <img class="lazyload object-cover h-full" data-src="img/technology/1.jpg" src="img/1x1.png" alt="item">
+            </div>
+            <h5 class="text-xl uppercase font-ntsomic-medium">Купольная металлизация</h5>
+          </a>
+        </div>
+      </section>
+
+      <section
+        class="container max-w-1336px px-2 mx-auto font-ntsomic-regular text-primary pt-60px mb-8 sm:mb-14 lg:mb-[100px]"
+        id="services">
+        <h2 class="text-secondary text-xl/[1] mb-2">Услуги</h2>
+        <h3 class="font-ntsomic-semibold text-2xl mb-20 sm:text-5xl">Комплексная поддержка <br> вашего проекта</h3>
+        <div class="grid grid-cols-12 gap-x-6 gap-y-10 font-ntsomic-semibold">
+          <a class="bg-cards border-solid border border-border-cards py-8 px-6 w-full h-[232px] col-span-12 md:col-span-6 xl:col-span-4"
+            href="#">
+            <img class="lazyload mb-10" data-src="img/services/1.svg" src="img/1x1.png" alt="icon">
+            <h3 class="text-base lg:text-xl uppercase">Разработка дизайна</h3>
+          </a>
+          <a class="bg-cards border-solid border border-border-cards py-8 px-6 w-full h-[232px] col-span-12 md:col-span-6 xl:col-span-4"
+            href="#">
+            <img class="lazyload mb-10" data-src="img/services/2.svg" src="img/1x1.png" alt="icon">
+            <h3 class="text-base lg:text-xl uppercase">Технологическое консультирование</h3>
+          </a>
+          <a class="bg-cards border-solid border border-border-cards py-8 px-6 w-full h-[232px] col-span-12 md:col-span-6 xl:col-span-4"
+            href="#">
+            <img class="lazyload mb-10" data-src="img/services/3.svg" src="img/1x1.png" alt="icon">
+            <h3 class="text-base lg:text-xl uppercase">Допечатная подготовка</h3>
+          </a>
+          <a class="bg-cards border-solid border border-border-cards py-8 px-6 w-full h-[232px] col-span-12 md:col-span-6 xl:col-span-4"
+            href="#">
+            <img class="lazyload mb-10" data-src="img/services/4.svg" src="img/1x1.png" alt="icon">
+            <h3 class="text-base lg:text-xl uppercase">Постпечатная обработка</h3>
+          </a>
+          <a class="bg-cards border-solid border border-border-cards py-8 px-6 w-full h-[232px] col-span-12 md:col-span-6 xl:col-span-4"
+            href="#">
+            <img class="lazyload mb-10" data-src="img/services/5.svg" src="img/1x1.png" alt="icon">
+            <h3 class="text-base lg:text-xl uppercase">Доставка продукции</h3>
+          </a>
+        </div>
+      </section>
+
+      <section
+        class="container max-w-1336px px-2 mx-auto font-ntsomic-regular text-primary pt-60px mb-8 sm:mb-14 lg:mb-[100px]"
+        id="portfolio">
+        <div class="grid grid-cols-1 items-center lg:grid-cols-2">
+          <h3 class="font-ntsomic-semibold text-2xl mb-5 sm:text-5xl lg:mb-0">Нам доверяют</h3>
+          <div class="items-wrap partners">
+            <ul class="items partners-list marquee">
+              <li class="item partner px-2">
+                <img class="h-14" data-src="img/photo.jpg" src="img/1x1.png" alt="Закат">
+              </li>
+              <li class="item partner px-2">
+                <img class="h-14" data-src="img/photo.jpg" src="img/1x1.png" alt="Закат">
+              </li>
+              <li class="item partner px-2">
+                <img class="h-14" data-src="img/photo.jpg" src="img/1x1.png" alt="Закат">
+              </li>
+              <li class="item partner px-2">
+                <img class="h-14" data-src="img/photo.jpg" src="img/1x1.png" alt="Закат">
+              </li>
+              <li class="item partner px-2">
+                <img class="h-14" data-src="img/photo.jpg" src="img/1x1.png" alt="Закат">
+              </li>
+            </ul>
+            <ul aria-hidden="true" class="items partners-list marquee">
+              <li class="item partner px-2">
+                <img class="h-14" data-src="img/photo.jpg" src="img/1x1.png" alt="Закат">
+              </li>
+              <li class="item partner px-2">
+                <img class="h-14" data-src="img/photo.jpg" src="img/1x1.png" alt="Закат">
+              </li>
+              <li class="item partner px-2">
+                <img class="h-14" data-src="img/photo.jpg" src="img/1x1.png" alt="Закат">
+              </li>
+              <li class="item partner px-2">
+                <img class="h-14" data-src="img/photo.jpg" src="img/1x1.png" alt="Закат">
+              </li>
+              <li class="item partner px-2">
+                <img class="h-14" data-src="img/photo.jpg" src="img/1x1.png" alt="Закат">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="container max-w-1336px px-2 mx-auto font-ntsomic-regular text-primary pt-60px mb-8 sm:mb-14 lg:mb-[100px]"
+        id="contacts">
+        <div
+          class="px-6 pt-8 pb-14 bg-bg-btn-clicked flex flex-wrap justify-center xl:justify-between xl:flex-nowrap 2xl:pr-28">
+          <div class="text-center mb-8 xl:text-left xl:mb-0">
+            <h2 class="uppercase font-ntsomic-semibold tracking-[-1px] mb-3 text-xl sm:text-[32px]/[1.2]">Напишите нам
+            </h2>
+            <h3 class="text-secondary text-xl tracking-[-1px]">После отправки сообщения мы свяжемся с вами</h3>
+          </div>
+          <form class="max-w-[536px]" action="#">
+            <div class="w-full grid gap-8 mb-10">
+              <div>
+                <p class="uppercase font-ntsomic-semibold text-xl tracking-[-1px] mb-[2px]">Имя<span
+                    class="text-destructive-500">*</span></p>
+                <p class="text-secondary text-sm mb-3">Укажите, как мы можем обращаться к вам</p>
+                <input
+                  class="w-full px-4 py-[14px] text-base text-secondary outline-0 border-b-[1.5px] border-border-input"
+                  type="text" placeholder="Имя">
+              </div>
+              <div>
+                <p class="uppercase font-ntsomic-semibold text-xl tracking-[-1px] mb-[2px]">Телефон<span
+                    class="text-destructive-500">*</span></p>
+                <p class="text-secondary text-sm mb-3">Оставьте свой контактный номер</p>
+                <input
+                  class="w-full px-4 py-[14px] text-base text-secondary outline-0 border-b-[1.5px] border-border-input"
+                  type="tel" placeholder="Номер телефона">
+              </div>
+              <div>
+                <p class="uppercase font-ntsomic-semibold text-xl tracking-[-1px] mb-[2px]">Комментарий<span
+                    class="text-destructive-500">*</span></p>
+                <p class="text-secondary text-sm mb-3">Вы можете сообщить нам дополнительную инфоормацию</p>
+                <textarea
+                  class="w-full min-h-[120px] px-4 py-[14px] text-base text-secondary outline-0 border-b-[1.5px] border-border-input resize-none"
+                  placeholder="Текст комментария"></textarea>
+              </div>
+              <div class="flex items-center">
+                <input type="checkbox" id="check">
+                <label class="form-checkbox cursor-pointer pl-9" for="check">
+                  Я соглашаюсь с условиями обработки персональных данных
+                </label>
+              </div>
+            </div>
+            <button type="submit"
+              class="uppercase dark-red p-5 font-ntsomic-semibold rounded-[48px] text-xl tracking-[-1px] text-white bg-default hover:bg-focused sm:py-[29px] sm:px-6">отправить</button>
+          </form>
+        </div>
+      </section>
+
+      <section
+        class="container max-w-1336px px-2 mx-auto font-ntsomic-regular text-primary pt-60px mb-8 sm:mb-14 lg:mb-20"
+        id="vacancies">
+        <div class="flex justify-between flex-wrap 2xl:flex-nowrap">
+          <div>
+            <h2
+              class="uppercase font-ntsomic-semibold tracking-[-1px] mb-6 text-xl sm:text-[32px]/[1.2] 2xl:mb-12 2xl:max-w-[470px]">
+              Присоединяйтесь к нашей команде
+            </h2>
+            <a class="gray p-5 font-ntsomic-semibold rounded-[48px] inline-block border-[2.5px] border-primary border-solid hover:bg-primary hover:text-white sm:py-[29px] sm:px-6"
+              href="#">СМОТРЕТЬ ВАКАНСИИ</a>
+          </div>
+          <div class="text-secondary w-full 2xl:max-w-[761px] 2xl:ml-auto">
+            <p class="my-4">В связи с постоянным ростом и развитием предприятия мы заинтересованы в поиске новых
+              талантов.
+            </p>
+            <p>Тут должна быть информация о преимуществах работы в компании. Достаточно много места, чтобы перечислить
+              их просто
+              текстом или небольшим маркированным списком, на усмотрение заказчика
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-footer pt-12 pb-8 text-white">
+      <div class="container max-w-1336px px-2 mx-auto">
+        <div class="block font-ntsomic-regular mb-8 sm:px-6 lg:mb-20 lg:px-0 lg:flex justify-between">
+          <div class="w-full mb-5 lg:mb-0">
+            <div class="mb-10">
+              <a class="logo uppercase text-[32px]/[32px]" href="#home">
+                flexo <span class="pr-5 bg-default inline-block">pack</span>
+              </a>
+              <h4 class="mt-8 uppercase text-xl ">ООО «ФлексоПАК»</h4>
+            </div>
+            <div class="grid gap-8 text-base">
+              <address class="not-italic text-base xl:text-xl">297543, Республика Крым, Симферопольский <br> р-н, с.
+                Курганное, ул.
+                Животноводов, д. 1Г.</address>
+              <div class="flex gap-10">
+                <div>
+                  <p class="mb-2 font-ntsomic-medium">График работы</p>
+                  <p class="font">Пн-Пт: 8:00 - 17:00</p>
+                </div>
+                <div class="grid font-ntsomic-medium text-destructive-500">
+                  <a class="mb-2" href="tel:+73652669555">+7 (3652) 66 95 55</a>
+                  <a href="tel:+73652669555">+7 (3652) 66 95 55</a>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div class="w-170px mr-10">
+                  <p class="font-ntsomic-medium mb-2">Email</p>
+                  <a href="mailto:i.skokov@fpack.ru">i.skokov@fpack.ru</a>
+                </div>
+                <ul class="flex gap-2">
+                  <li>
+                    <a href="#">
+                      <img src="img/vk.svg" alt="vk">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="img/WA.svg" alt="WhatsApp">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="img/Tg.svg" alt="Telegram">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="w-full h-363px lg:max-w-350px 2xl:max-w-536px" id="map">
+          </div>
+        </div>
+        <ul
+          class="text-sm font-ntsomic-medium grid gap-2 text-center sm:text-base lg:grid-cols-[repeat(2,auto)] 3xl:grid-cols-[repeat(4,auto)]">
+          <li><a href="#">Политика обработки персональных данных</a></li>
+          <li><a href="#">Политика конфиденциальности</a></li>
+          <li class="text-tertiary"><a href="#">Flexopack© 2023, Все права защищены</a></li>
+          <li class="text-tertiary"><a href="#">Разработано компанией “Ракурс”</a></li>
+        </ul>
+      </div>
+    </footer>
+  </section>
+
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,270 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Anton-Regular';
+  src: url('../fonts/Anton-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'NTSomic-Bold';
+  src: url('../fonts/NTSomic-Bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'NTSomic-Semibold';
+  src: url('../fonts/NTSomic-Semibold.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'NTSomic-Medium';
+  src: url('../fonts/NTSomic-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'NTSomic-Regular';
+  src: url('../fonts/NTSomic-Regular.ttf');
+  font-weight: 400;
+}
+
+.scroll-none {
+  overflow-y: hidden;
+}
+
+.menu ul.active {
+  transform: translateY(0%);
+}
+
+@media (min-width: 960px) {
+  .menu ul {
+    transform: translateY(0%);
+  }
+}
+
+@media (max-width: 959px) {
+  .menu ul {
+    transform: translateY(-200%);
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .menu ul.active li {
+    height: 100%;
+  }
+
+  .menu ul.active a {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.btn-dark {
+  background-color: #DAD8D866;
+  color: #747474;
+}
+
+.btn-red {
+  background-color: #FF626C;
+}
+
+.btn-dark-red {
+  background-color: #FF626C;
+}
+
+/* marquee */
+
+.items-wrap {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+}
+
+.items {
+  flex-shrink: 0;
+  display: flex;
+  counter-reset: item;
+  justify-content: space-around;
+  min-width: 100%;
+}
+
+.item {
+  position: relative;
+  flex: 0 0 auto;
+  counter-increment: item;
+  transition: all 0.1s ease-in-out;
+}
+
+.item:hover {
+  color: #FF626C;
+}
+
+.item::before {
+  content: '';
+  background-image: url('../img/dot-list.svg');
+  height: 16px;
+  width: 16px;
+  left: -8px;
+  position: absolute;
+}
+
+.marquee {
+  animation: scroll 20s linear infinite;
+}
+
+.items-wrap:hover .marquee {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+
+.about-item {
+  position: relative;
+}
+
+.about-item::before {
+  content: '';
+  font-size: 0;
+  position: absolute;
+  height: 64px;
+  width: 64px;
+  left: 0;
+}
+
+.about-item--1::before {
+  background-image: url('../img/about/1.svg');
+}
+
+.about-item--2::before {
+  background-image: url('../img/about/2.svg');
+}
+
+.about-item--3::before {
+  background-image: url('../img/about/3.svg');
+}
+
+.about-item--4::before {
+  background-image: url('../img/about/4.svg');
+}
+
+.about-item--5::before {
+  background-image: url('../img/about/5.svg');
+}
+
+.items-wrap.partners {
+  gap: 80px;
+}
+
+.item.partner::before {
+  background-image: none;
+}
+
+
+.items-wrap.partners:before,
+.items-wrap.partners:after {
+  content: "";
+  height: 100%;
+  top: 0;
+  width: 10%;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.items-wrap.partners:before {
+  left: 0;
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%);
+}
+
+.items-wrap.partners:after {
+  right: 0;
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 100%);
+}
+
+.items.partners-list {
+  gap: 80px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.form-checkbox {
+  position: relative;
+}
+
+.form-checkbox::before {
+  content: '';
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 0;
+  top: 4px;
+  border: 1px solid #4B4B4B;
+  border-radius: 1px;
+}
+
+input[type="checkbox"]:checked+.form-checkbox::before {
+  border: 1px solid #1F960C;
+  background-color: transparent;
+  color: #1F960C;
+  background-image: url('../img/check.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.technology-header li {
+  position: relative;
+}
+
+.technology-header li::after {
+  content: '';
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  background-image: url('../img/CaretRight.svg');
+  top: 20%;
+}
+
+.technology-header li:last-child::after {
+  height: 0;
+  width: 0;
+}
+
+/* 
+// <span><img class="inline-block" src="img/CaretRight.svg" alt="right"></span><span><img class="inline-block" src="img/CaretRight.svg" alt="right"></span>
+ */
+
+
+
+
+
+
+
+
+.ymaps3x0--map-copyrights {
+  display: none;
+}
