@@ -684,10 +684,6 @@ video {
   margin-bottom: 2px;
 }
 
-.mb-\[65px\] {
-  margin-bottom: 65px;
-}
-
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -706,10 +702,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-\[92px\] {
-  margin-top: 92px;
 }
 
 .block {
@@ -748,6 +740,10 @@ video {
   height: 363px;
 }
 
+.h-40 {
+  height: 10rem;
+}
+
 .h-60 {
   height: 15rem;
 }
@@ -756,20 +752,16 @@ video {
   height: 16rem;
 }
 
+.h-80 {
+  height: 20rem;
+}
+
 .h-\[232px\] {
   height: 232px;
 }
 
 .h-\[312px\] {
   height: 312px;
-}
-
-.h-\[577px\] {
-  height: 577px;
-}
-
-.h-\[690px\] {
-  height: 690px;
 }
 
 .h-auto {
@@ -782,14 +774,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-80 {
-  height: 20rem;
-}
-
-.h-40 {
-  height: 10rem;
 }
 
 .min-h-\[120px\] {
@@ -820,16 +804,8 @@ video {
   max-width: 412px;
 }
 
-.max-w-\[533px\] {
-  max-width: 533px;
-}
-
 .max-w-\[536px\] {
   max-width: 536px;
-}
-
-.max-w-\[645px\] {
-  max-width: 645px;
 }
 
 .max-w-full {
@@ -1093,12 +1069,8 @@ video {
   padding-top: 3rem;
 }
 
-.pt-20 {
-  padding-top: 5rem;
-}
-
-.pt-40 {
-  padding-top: 10rem;
+.pt-5 {
+  padding-top: 1.25rem;
 }
 
 .pt-6 {
@@ -1115,10 +1087,6 @@ video {
 
 .pt-\[60px\] {
   padding-top: 60px;
-}
-
-.pt-5 {
-  padding-top: 1.25rem;
 }
 
 .text-center {
@@ -1167,11 +1135,6 @@ video {
 
 .text-\[13px\] {
   font-size: 13px;
-}
-
-.text-\[13px\]\/\[16px\] {
-  font-size: 13px;
-  line-height: 16px;
 }
 
 .text-\[32px\]\/\[32px\] {
@@ -1321,41 +1284,81 @@ video {
   font-weight: 400;
 }
 
+.menu-btn span {
+  transition: all .2s;
+}
+
+.menu-btn--active span:nth-child(1) {
+  transform: translateY(15px) translateX(-15px) rotate(45deg);
+}
+
+.menu-btn--active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn--active span:nth-child(3) {
+  transform: translateX(-15px) rotate(-45deg);
+}
+
 .scroll-none {
   overflow-y: hidden;
 }
 
 .menu ul.active {
-  transform: translateY(0%);
+  top: 60px;
+}
+
+.menu ul {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1000px;
+  text-align: center;
+  background-color: #ffffff;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: -1;
+  overflow-y: scroll;
+  transition: all .2s;
+}
+
+.menu ul.active li {
+  height: 100%;
+}
+
+.menu ul.active a {
+  padding: 15px 0;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
 @media (min-width: 960px) {
   .menu ul {
-    transform: translateY(0%);
-  }
-}
-
-@media (max-width: 959px) {
-  .menu ul {
-    transform: translateY(-200%);
-    height: calc(100vh - 60px);
+    position: static;
+    text-align: left;
+    background-color: #ffffff;
+    height: auto;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: -1;
+    flex-direction: row;
+    overflow-y: none;
   }
 
   .menu ul.active li {
-    height: 100%;
+    height: auto;
   }
 
   .menu ul.active a {
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+    padding: 0;
+    font-size: 16px;
+    display: inline-block;
+    height: auto;
+    width: auto;
   }
 }
 
@@ -1520,96 +1523,6 @@ input[type="checkbox"]:checked+.form-checkbox::before {
 
 /* before after slider */
 
-/* .before-after__wrapper {
-  position: relative;
-  height: 690px;
-  width: 100%;
-  overflow: hidden;
-}
-
-.before-after__images {
-  height: 100%;
-  width: 100%;
-  display: flex;
-}
-
-.before-after__img1 {
-  height: 100%;
-  width: 100%;
-  background-image: url('../img/case/2.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.before-after__img2 {
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  background-image: url('../img/case/2-black.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.before-after__slider {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-}
-
-.before-after__slider input {
-  width: 100%;
-  outline: none;
-  background: none;
-  -webkit-appearance: none;
-}
-
-.before-after__slider input::-webkit-slider-thumb {
-  height: 690px;
-  width: 6px;
-  background-color: none;
-  -webkit-appearance: none;
-  cursor: pointer;
-}
-
-.before-after__slider .drag-line {
-  width: 6px;
-  height: 690px;
-  position: absolute;
-  left: 49.85%;
-  pointer-events: none;
-}
-
-.before-after__slider .drag-line::after,
-.before-after__slider .drag-line::before {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 100%;
-  background: #d22530;
-}
-
-.before-after__slider .drag-line::after {
-  top: 0;
-}
-
-.before-after__slider .drag-line::before {
-  bottom: 0;
-}
-
-.before-after__slider .drag-line span {
-  height: 42px;
-  width: 42px;
-  background-color: #d22530;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-} */
-
 .slider-before-after {
   position: relative;
   overflow: hidden;
@@ -1748,6 +1661,11 @@ input[type="checkbox"]:checked+.form-checkbox::before {
     line-height: 1;
   }
 
+  .sm\:text-\[13px\]\/\[16px\] {
+    font-size: 13px;
+    line-height: 16px;
+  }
+
   .sm\:text-\[32px\]\/\[1\.2\] {
     font-size: 32px;
     line-height: 1.2;
@@ -1766,11 +1684,6 @@ input[type="checkbox"]:checked+.form-checkbox::before {
   .sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .sm\:text-\[13px\]\/\[16px\] {
-    font-size: 13px;
-    line-height: 16px;
   }
 }
 
@@ -1884,12 +1797,12 @@ input[type="checkbox"]:checked+.form-checkbox::before {
     padding-right: 0px;
   }
 
-  .lg\:pt-20 {
-    padding-top: 5rem;
-  }
-
   .lg\:pt-10 {
     padding-top: 2.5rem;
+  }
+
+  .lg\:pt-20 {
+    padding-top: 5rem;
   }
 
   .lg\:pt-40 {
@@ -2001,16 +1914,16 @@ input[type="checkbox"]:checked+.form-checkbox::before {
     margin-bottom: 3rem;
   }
 
+  .\32xl\:mb-\[65px\] {
+    margin-bottom: 65px;
+  }
+
   .\32xl\:ml-auto {
     margin-left: auto;
   }
 
   .\32xl\:mt-\[92px\] {
     margin-top: 92px;
-  }
-
-  .\32xl\:mb-\[65px\] {
-    margin-bottom: 65px;
   }
 
   .\32xl\:max-w-536px {
@@ -2021,16 +1934,16 @@ input[type="checkbox"]:checked+.form-checkbox::before {
     max-width: 470px;
   }
 
-  .\32xl\:max-w-\[761px\] {
-    max-width: 761px;
-  }
-
   .\32xl\:max-w-\[533px\] {
     max-width: 533px;
   }
 
   .\32xl\:max-w-\[645px\] {
     max-width: 645px;
+  }
+
+  .\32xl\:max-w-\[761px\] {
+    max-width: 761px;
   }
 
   .\32xl\:flex-nowrap {

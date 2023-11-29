@@ -8,6 +8,7 @@ menu.forEach(e => {
     document.querySelector('.menu ul').classList.toggle('active');
     if (menuBtn) {
       document.querySelector('body').classList.toggle('scroll-none');
+      menuBtn.classList.toggle('menu-btn--active');
     }
   });
 });
