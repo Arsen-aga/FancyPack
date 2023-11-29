@@ -43,7 +43,6 @@ const options = {
 function handleImg(myImg, observer){
   myImg.forEach(myImgSingle => {
     if (myImgSingle.intersectionRatio > 0){
-      console.log(myImgSingle.intersectionRatio);
       loadImage(myImgSingle.target);
     }
   });
@@ -67,6 +66,19 @@ if (document.querySelector('.gallery')){
     speed: 500,
   });
 }
+
+// before after slider
+
+const slider = document.querySelector('.before-after__slider input');
+const img = document.querySelector('.before-after__images .before-after__img2');
+const dragLine = document.querySelector('.before-after__slider .drag-line');
+
+slider.oninput = () => {
+  let sliderVal = slider.value;
+  dragLine.style.left = sliderVal + '%';
+  img.style.width = sliderVal + '%';
+}
+
 
 
 

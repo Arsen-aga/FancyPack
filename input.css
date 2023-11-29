@@ -137,6 +137,8 @@
   }
 }
 
+/* icons in main page */
+
 .about-item {
   position: relative;
 }
@@ -169,6 +171,8 @@
 .about-item--5::before {
   background-image: url('../img/about/5.svg');
 }
+
+/* marquee */
 
 .items-wrap.partners {
   gap: 80px;
@@ -208,6 +212,9 @@
   gap: 80px;
 }
 
+
+/* checkbox */
+
 input[type="checkbox"] {
   display: none;
 }
@@ -236,6 +243,8 @@ input[type="checkbox"]:checked+.form-checkbox::before {
   background-position: center;
 }
 
+/* technology page */
+
 .technology-header li {
   position: relative;
 }
@@ -254,16 +263,101 @@ input[type="checkbox"]:checked+.form-checkbox::before {
   width: 0;
 }
 
-/* 
-// <span><img class="inline-block" src="img/CaretRight.svg" alt="right"></span><span><img class="inline-block" src="img/CaretRight.svg" alt="right"></span>
- */
+/* before after slider */
 
 
+.before-after__wrapper {
+  position: relative;
+  height: 690px;
+  width: 100%;
+  overflow: hidden;
+}
 
+.before-after__images {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
 
+.before-after__img1 {
+  height: 100%;
+  width: 100%;
+  background-image: url('../img/case/2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
+.before-after__img2 {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background-image: url('../img/case/2-black.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
+.before-after__slider {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
 
+.before-after__slider input {
+  width: 100%;
+  outline: none;
+  background: none;
+  -webkit-appearance: none;
+}
+
+.before-after__slider input::-webkit-slider-thumb {
+  height: 690px;
+  width: 6px;
+  background-color: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.before-after__slider .drag-line {
+  width: 6px;
+  height: 690px;
+  position: absolute;
+  /* background-color: #d22530; */
+  left: 49.85%;
+  pointer-events: none;
+}
+
+.before-after__slider .drag-line::after,
+.before-after__slider .drag-line::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #d22530;
+}
+
+.before-after__slider .drag-line::after {
+  top: 0;
+}
+
+.before-after__slider .drag-line::before {
+  bottom: 0;
+}
+
+.before-after__slider .drag-line span {
+  height: 42px;
+  width: 42px;
+  background-color: #d22530;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* maps */
 
 .ymaps3x0--map-copyrights {
   display: none;
