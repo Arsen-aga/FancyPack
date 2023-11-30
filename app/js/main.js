@@ -7,8 +7,10 @@ menu.forEach(e => {
   e.addEventListener('click', () => {
     document.querySelector('.menu ul').classList.toggle('active');
     if (menuBtn) {
-      document.querySelector('body').classList.toggle('scroll-none');
       menuBtn.classList.toggle('menu-btn--active');
+      if (document.body.clientWidth < 960) {
+        document.querySelector('body').classList.toggle('scroll-none');
+      }
     }
   });
 });
