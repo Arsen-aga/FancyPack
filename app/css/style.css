@@ -1312,7 +1312,7 @@ video {
   position: absolute;
   left: 0;
   right: 0;
-  top: -1000px;
+  top: -100vh;
   text-align: center;
   background-color: #ffffff;
   height: calc(100vh - 60px);
@@ -1320,7 +1320,7 @@ video {
   flex-direction: column;
   justify-content: space-between;
   z-index: -1;
-  overflow-y: scroll;
+  overflow-y: auto;
   transition: all .2s;
 }
 
@@ -1346,7 +1346,6 @@ video {
     height: auto;
     display: flex;
     flex-direction: row;
-    overflow-y: none;
   }
 
   .menu ul.active li {
